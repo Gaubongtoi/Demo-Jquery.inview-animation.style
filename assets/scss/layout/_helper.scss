@@ -1,0 +1,64 @@
+/*  Helper
+------------------------------------*/
+.is_pc {
+  @include sp {
+    display: none !important;
+  }
+}
+.is_sp {
+  @include pc {
+    display: none !important;
+  }
+}
+.is_hidden {
+  display: none;
+}
+
+.is-hide {
+  &[data-mq="lg"] {
+    display: none;
+    @include mqMd {
+      display: block;
+    }
+  }
+  &[data-mq="lg-flex"] {
+    display: none;
+    @include mqMd {
+      display: flex;
+    }
+  }
+  &[data-mq="md"] {
+    @include mqMd {
+      display: none;
+    }
+  }
+  &[data-mq="sm"] {
+    @include sp {
+      display: none;
+    }
+  }
+}
+
+.tar {
+  text-align: right;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+
+.float_left {
+  float: left !important;
+}
+.float_right {
+  float: right !important;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+.w100 {
+  width: 100%;
+}

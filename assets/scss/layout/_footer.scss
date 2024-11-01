@@ -1,0 +1,126 @@
+.footer {
+  background: #faf9f9;
+  padding: 2rem 0;
+  position: relative;
+  color: #7f7d80;
+  @include sp {
+    padding: 3.2rem 0;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 4.8rem;
+    @include sp {
+      flex-direction: column;
+      padding: 0 1.5rem;
+    }
+  }
+  &__links {
+    flex-shrink: 0;
+    @include sp {
+      margin-bottom: 1.6rem;
+    }
+    ul {
+      display: flex;
+      @include sp {
+        flex-wrap: wrap;
+        gap: 1.6rem;
+        justify-content: center;
+      }
+    }
+    li {
+      position: relative;
+      &:first-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+    a {
+      font-size: 1.4rem;
+    }
+  }
+  &__logo {
+    margin-right: 2.4rem;
+    @include sp {
+      margin-right: 0;
+    }
+  }
+  &__social {
+    margin-left: 4.8rem;
+    ul {
+      display: flex;
+      gap: 1rem;
+    }
+    @include sp {
+      margin-left: 0;
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+.copyright {
+  font-size: 1rem;
+  flex: 1;
+  text-transform: uppercase;
+  span {
+    font-weight: 700;
+  }
+  @include sp {
+    order: 4;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0 -1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__links {
+    text-align: right;
+    ul {
+      gap: 3rem;
+    }
+    li {
+      text-align: right;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .footer__logo {
+    a {
+      display: inline-block;
+    }
+    span {
+      vertical-align: top;
+      margin-top: 0.4rem;
+      margin-left: 2rem;
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__links {
+    text-align: center;
+    margin: 0 auto 1rem;
+    li {
+      // margin: 0 0.8rem 1rem;
+      text-align: center;
+    }
+  }
+  .footer__logo {
+    margin-bottom: 2.4rem;
+    p {
+      text-align: center;
+    }
+    a {
+      display: block;
+      // width: 8.2rem;
+      margin: 0 auto;
+    }
+    span {
+      display: block;
+    }
+  }
+}

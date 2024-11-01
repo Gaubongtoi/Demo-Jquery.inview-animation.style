@@ -1,0 +1,9 @@
+/*------------------- List -------------------*/
+
+.list-items {
+    display: flex;
+    flex-wrap: wrap;
+    // @extend %clearfix;
+    .items {
+    }
+}

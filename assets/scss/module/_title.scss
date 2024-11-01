@@ -1,0 +1,98 @@
+// /*------------------- Typography -------------------*/
+.title_h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.21;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0;
+  text-align: center;
+  margin-bottom: 4.8rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 50%;
+  //   bottom: 0;
+  //   width: 1px;
+  //   height: 3rem;
+  //   background-color: #373338;
+  //   transform: rotate(45deg) translateX(-50%);
+  //   @include sp {
+  //     height: 2.5rem;
+  //   }
+  // }
+  @include sp {
+    font-size: 2.8rem;
+    letter-spacing: 0.2rem;
+    padding-bottom: 0;
+    margin-bottom: 2.4rem;
+  }
+}
+.title_h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+  text-align: center;
+}
+
+.title_A {
+  // font-size: 24px;
+  // color: $color-primary;
+  // line-height: 1.8;
+  // font-weight: bold;
+}
+
+.title_B {
+  // font-size: 24px;
+  // line-height: 1.8;
+  // color: $color-primary;
+  // font-weight: bold;
+}
+
+.text {
+  // padding:
+  // font-size: ;
+  // color:
+}
+.txt-large {
+  font-size: 2rem;
+  font-weight: bold;
+  @include sp {
+    font-size: 1.3rem;
+  }
+}
+
+@include sp {
+  .title_h2 {
+    // font-size: 24px;
+    // color: $color-primary;
+    // line-height: 1.9;
+    // font-weight: bold;
+  }
+  .title_h3 {
+    // font-size: 24px;
+    // line-height: 1.8;
+    // color: $color-primary;
+    // font-weight: bold;
+  }
+  .title_A {
+    // font-size: 24px;
+    // color: $color-primary;
+    // line-height: 1.8;
+    // font-weight: bold;
+  }
+  .title_B {
+    // font-size: 24px;
+    // line-height: 1.8;
+    // color: $color-primary;
+    // font-weight: bold;
+  }
+  .text {
+    // padding:
+    // font-size: ;
+    // color:
+  }
+}

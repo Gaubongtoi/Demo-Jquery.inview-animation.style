@@ -1,0 +1,107 @@
+/*------------------- Wraper -------------------*/
+
+.wrapper {
+  // margin-top: 7.2rem;
+  > *:last-child {
+    // padding-bottom: 0;
+    // margin-bottom: 0;
+  }
+  &.sub {
+    margin-bottom: 10rem;
+    @include sp {
+    }
+  }
+
+  @include sp {
+    margin-top: 0;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.container {
+  // @extend %clearfix;
+  max-width: 1210px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  @include sp {
+    padding: 0 1.5rem;
+  }
+}
+.inner {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+body.is-fixed {
+  @include sp {
+    overflow: hidden;
+  }
+  &.is-scroll {
+  }
+}
+.breadcrumb {
+  display: flex;
+  font-size: 1.2rem;
+  padding-top: 3rem;
+  align-items: center;
+  a {
+    margin-right: 1rem;
+    position: relative;
+    display: flex;
+  }
+  @include sp {
+    display: none;
+  }
+}
+.overflow {
+  overflow: hidden;
+}
+p.txt {
+  font-size: 1.6rem;
+  line-height: 1.625;
+  font-weight: 400;
+  strong {
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+  &--small {
+    font-size: 1.4rem;
+    line-height: 1.71;
+    a {
+      text-decoration: underline;
+    }
+  }
+  &--large {
+    font-size: 2.4rem;
+    line-height: 2.91;
+    span {
+      font-size: 4.4rem;
+      font-weight: bold;
+      line-height: 2.5;
+      @include sp {
+        line-height: 1;
+        font-size: 2.5rem;
+      }
+    }
+    a {
+      text-decoration: underline;
+    }
+    @include sp {
+      font-size: 1.5rem;
+      line-height: 2.3rem;
+      text-align: center;
+      padding: 0 3rem;
+      font-weight: bold;
+      margin-bottom: 4rem;
+    }
+  }
+}

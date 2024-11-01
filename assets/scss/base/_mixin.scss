@@ -1,0 +1,112 @@
+// Breadpoint
+// ------------------------
+@mixin mqLg {
+  @media only screen and (max-width: $widthLg + px) {
+    @content;
+  }
+}
+@mixin mqLgm {
+  @media only screen and (min-width: $widthLg + px) {
+    @content;
+  }
+}
+@mixin pc {
+  @media only screen and (min-width: $widthDes + px) {
+    @content;
+  }
+}
+@mixin mqMd {
+  @media only screen and (max-width: $widthMd + px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media only screen and (max-width: $widthSm + px) {
+    @content;
+  }
+}
+// Get font-size
+// ------------------------
+@function get_vw($size, $viewport: ($widthDes/2)) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw * 10;
+}
+
+@mixin fontSize($sizeValue, $type: pc) {
+  @if $type == "pc" {
+    // font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+  } @else if $type == "sp" {
+    font-size: $sizeValue * 10px;
+    font-size: get_vw($sizeValue);
+  }
+}
+
+// get size VW
+// ------------------------
+@function calcVw($number) {
+  @return ($number / $widthDes * 100) + vw;
+}
+// text truncate
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// トランジション
+// ------------------------
+@mixin transition($property) {
+  transition-property: $property;
+  transition-duration: 0.8s;
+  transition-timing-function: $ease-easeOut;
+}
+// placeholderのcss
+// ------------------------
+@mixin placeholderColor($color) {
+  &:placeholder-shown {
+    color: $color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+// hover
+// ------------------------
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+@mixin mincho {
+  font-family: "Hiragino Mincho ProN", 游明朝, "Yu Mincho", YuMincho, メイリオ,
+    Meiryo, serif;
+  @media all and (-ms-high-contrast: none) {
+    font-family: メイリオ, Meiryo, serif;
+  }
+}
+@mixin gothic {
+  font-family: -apple-system, BlinkMacSystemFont, "Yu Gothic", YuGothic, Verdana;
+}
+@mixin inter {
+  font-family: "Inter", serif;
+}
+
+@mixin boxShadow {
+  box-shadow: 0 1px 6px rgba(#000, 0.15);
+}
